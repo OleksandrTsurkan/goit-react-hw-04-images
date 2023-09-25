@@ -12,7 +12,7 @@ export const Modal = ({ selectedPhoto: { src, alt }, onClose }) => {
         onClose();
       }
     };
-    window.addEventListener('keydown', this.handleKeyDawn);
+    window.addEventListener('keydown', handleKeyDawn);
     return () => {
       window.removeEventListener('keydown', handleKeyDawn);
     };
