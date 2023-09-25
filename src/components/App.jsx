@@ -67,7 +67,7 @@ export const App = () => {
     setPhotoName(value);
     setPage(1);
     setPhotos([]);
-    setBtnLoadMore(false);
+    setBtnLoadMore(true);
   };
 
   const onClickRender = () => {
@@ -83,13 +83,12 @@ export const App = () => {
       <Searchbar onSubmit={onSubmitForm} />
       {isloading && <Loader />}
       <ImageGallery photos={photos} onClickImageItem={toggleModal} />
-      {photos.length !== 0 && btnLoadMore && isloading && (
+      {photos.length !== 0 && btnLoadMore && (
         <Button onClickRender={onClickRender} />
       )}
       {selectedPhoto && (
         <Modal selectedPhoto={selectedPhoto} onClose={toggleModal} />
       )}
-      {/* <ToastContainer autoClose={3000} /> */}
     </div>
   );
 };

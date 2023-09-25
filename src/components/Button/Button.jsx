@@ -9,3 +9,5 @@ export const Button = ({ onClickRender }) => {
     </WrapperButton>
   );
 };
+
+export default Button;
